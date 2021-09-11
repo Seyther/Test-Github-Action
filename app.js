@@ -1,3 +1,8 @@
-const app = () => {
-  return 1 + 1;
-};
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res, next) => {
+  return res.send('Hello World!');
+});
+
+app.listen(3000);
